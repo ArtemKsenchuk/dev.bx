@@ -1,3 +1,3 @@
 <?php
 
-echo 'log';
+echo 'log и дата';

@@ -1,7 +1,12 @@
 <?php
+error_reporting(E_ALL);
 
 function ReadFromConsole2($input)
 {
+	if (!isset($input))
+	{
+		$input = trim(fgets(STDIN));
+	}
 	if ($input == 'true')
 	{
 		return $input = true;
@@ -27,3 +32,5 @@ function ReadFromConsole2($input)
 		return $input = (string)$input;
 	}
 }
+$input = null;
+var_dump(ReadFromConsole2($input));

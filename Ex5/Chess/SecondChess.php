@@ -1,13 +1,20 @@
 <?php
-require('SecondReader.php');
-echo 'Введите каждую координату через enter'.PHP_EOL;
-$FigurePlace = ReadFromConsole();
-if (($FigurePlace[0] == $FigurePlace[2]) || ($FigurePlace[1] == $FigurePlace[3]))
+class Chess
 {
-	echo 'true';
+	public function Chessing()
+	{
+		require('SecondReader.php');
+		echo "Wite every number within 'enter'".PHP_EOL;
+		$FigurePlace = ReadFromConsole();
+		if (($FigurePlace[0] == $FigurePlace[2]) || ($FigurePlace[1] == $FigurePlace[3]))
+		{
+			echo 'ДА';
+		}
+		else
+		{
+			echo 'НЕТ';
+		}
+	}
 }
-else
-{
-	echo 'false';
-}
-
+$Chess = new Chess();
+$Chess -> Chessing();

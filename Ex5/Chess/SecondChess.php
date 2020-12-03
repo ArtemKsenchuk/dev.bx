@@ -1,20 +1,19 @@
 <?php
 class Chess
 {
-	public function Chessing()
+	public function Chessing($input)
 	{
 		require('SecondReader.php');
-		echo "Wite every number within 'enter'".PHP_EOL;
-		$FigurePlace = ReadFromConsole();
+		$FigurePlace = ReadFromConsole($input);
 		if (($FigurePlace[0] == $FigurePlace[2]) || ($FigurePlace[1] == $FigurePlace[3]))
 		{
-			echo 'ДА';
+			return 'ДА';
 		}
 		else
 		{
-			echo 'НЕТ';
+			return 'НЕТ';
 		}
 	}
 }
 $Chess = new Chess();
-$Chess -> Chessing();
+$Chess->Chessing();

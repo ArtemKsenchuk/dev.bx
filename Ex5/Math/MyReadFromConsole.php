@@ -1,10 +1,11 @@
 <?php
 
 error_reporting(E_ALL);
+echo "Please type your number or 'stop': ".PHP_EOL;
 
-function ReadOutOfConsole($input)
+function ReadFromConsole($input)
 {
-	if (!isset($input))
+	if ($input == '')
 	{
 		$input = trim(fgets(STDIN));
 	}
@@ -24,15 +25,13 @@ function ReadOutOfConsole($input)
 	{
 		return $input = +$input;
 	}
-	if ($input == '!stop')
+	if (is_array($input))
 	{
-		return $input = null;
+		return $input;
 	}
 	else
 	{
 		return $input = (string)$input;
 	}
-}
 
-$input = null;
-var_dump(ReadFromConsole($input));
+}

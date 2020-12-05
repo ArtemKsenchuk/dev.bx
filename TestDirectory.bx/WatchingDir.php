@@ -1,13 +1,12 @@
 <?php
 error_reporting();
 //C:\Users\USER\server\OpenServer\domains\TestDirectory.bx
-//$currentDir = opendir(trim(fgets(STDIN)));
+$currentDir = opendir(trim(fgets(STDIN)));
 
 function DirCheck($currentDir)
 {
 
 	$list = [
-		'dirs' => [],
 		'folder' => [],
 		'files' => []
 	];
@@ -23,34 +22,32 @@ function DirCheck($currentDir)
 		}
 		if (is_file($element))
 		{
-			$list['files'][] = $element;
-			$list['files']["$element"]['filesize'] = filesize($element);
-
+            $list['files'][$element]['filesize'] = filesize($element);
+        }
 		if (is_readable($element))
 		{
-			$list['files']["$element"]['is_readable'] = 'true';
+			$list['files'][$element]['is_readable'] = true;
 		}
 		if (is_writable($element))
 		{
-			$list['files']["$element"]['is_writable'] = 'true';
-		}
-
+			$list['files'][$element]['is_writable'] = true;
 		}
 		else
-		{
-		$list['folder'][] = $element;
+        {
+            $list['folder'][] = $element;
+        }
 		if (is_readable($element))
 		{
-			$list['folder']["$element"]['is_readable'] = 'true';
+			$list['folder'][$element]['is_readable'] = true;
 		}
 		if (is_writable($element))
 		{
-			$list['folder']["$element"]['is_writable'] = 'true';
+			$list['folder'][$element]['is_writable'] = true;
 		}
 
 	}
+    closedir($currentDir);
+    return ($list);
 }
-closedir($currentDir);
-return ($list);
-}
-//var_dump(DirCheck($currentDir));
+
+var_export(DirCheck($currentDir));

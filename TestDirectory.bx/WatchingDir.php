@@ -2,10 +2,9 @@
 error_reporting();
 //C:\Users\USER\server\OpenServer\domains\TestDirectory.bx
 
-
+$currentDir = opendir(trim(fgets(STDIN)));
 function DirCheck($currentDir)
 {
-	$currentDir = opendir(trim(fgets(STDIN)));
 	$list = [
 		'folder' => [],
 		'files' => []
@@ -15,10 +14,6 @@ function DirCheck($currentDir)
 		if (in_array($element, ['.', '..']))
 		{
 			continue;
-		}
-		if (is_dir($element))
-		{
-			$list['dirs'][] = $element;
 		}
 		if (is_file($element))
 		{

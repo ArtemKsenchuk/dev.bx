@@ -3,7 +3,6 @@
 require_once 'WatchingDir.php';
 $Dir = opendir('C:/Users/USER/server/OpenServer/domains/TestDirectory.bx/');
 $Array = DirCheck($Dir);
-//print_r($Array);
 
 function DirTest($Array)
 {

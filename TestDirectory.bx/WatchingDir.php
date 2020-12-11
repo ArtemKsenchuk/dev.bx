@@ -1,11 +1,11 @@
 <?php
 error_reporting();
 //C:\Users\USER\server\OpenServer\domains\TestDirectory.bx
-$currentDir = opendir(trim(fgets(STDIN)));
+
 
 function DirCheck($currentDir)
 {
-
+	$currentDir = opendir(trim(fgets(STDIN)));
 	$list = [
 		'folder' => [],
 		'files' => []

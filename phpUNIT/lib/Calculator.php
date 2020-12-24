@@ -22,7 +22,7 @@ class Calculator
 	{
 		if($b === 0)
 		{
-			throw new InvalidArgumentException('Divider cant be a zero');
+			throw new InvalidArgumentException('Divider cant be a zero' );
 		}
 		return $a / $b;
 	}

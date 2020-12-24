@@ -5,7 +5,6 @@ require_once (__DIR__ . '/../lib/Calculator.php');
 
 class CalculatorTest extends TestCase
 {
-
 	public function testAdd(): void
 	{
 		$calculator = new Calculator();
@@ -28,7 +27,6 @@ class CalculatorTest extends TestCase
 	}
 	public function testDivOnZero(): void
 	{
-		///не доделана ловля исключения по делению на 0
 		$calculator = new Calculator();
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('Divider cant be a zero');

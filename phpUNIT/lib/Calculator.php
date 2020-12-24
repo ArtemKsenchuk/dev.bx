@@ -24,7 +24,6 @@ class Calculator
 		{
 			throw new InvalidArgumentException('Divider cant be a zero');
 		}
-
 		return $a / $b;
 	}
 	public function exp( int $a, int $b): int

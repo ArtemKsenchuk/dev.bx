@@ -32,7 +32,6 @@ class CalculatorTest extends TestCase
 		$this->expectExceptionMessage('Divider cant be a zero');
 		$calculator->divide(12, 0);
 	}
-
 	public function testExp(): void
 	{
 		$calculator = new Calculator();

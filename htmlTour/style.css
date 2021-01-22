@@ -1,0 +1,59 @@
+
+body {
+	max-width: 100%;
+	min-height: 1080px;
+	overflow-x: hidden;
+	background: url(images/background.png) center;
+}
+
+.banner {
+	padding-top: 40px;
+	padding-bottom: 35px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+}
+.input-group {
+	margin-bottom: 5px;
+	background: #fff;
+}
+
+.form-control2 {
+	width: 20%;
+}
+.form-control4 {
+	width: 80%;
+	height: 29px;
+	margin-left: -20px;
+}
+.form-control3 {
+	width: 80%;
+	margin-bottom: 26px;
+	height: 29px;
+	margin-left: -20px;
+}
+.wrap {
+	margin: 1%;
+}
+.game {
+	margin-bottom: 40px;
+}
+.button {
+	margin-top: 20px;
+}
+.winner {
+	background: #fff; /* Цвет фона */
+	color: #000; /* Цвет текста */
+	border-radius: 2px; /* Уголки */
+	height: 27px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.pair {
+margin-bottom: 120px;
+	margin-top: -70px;
+}
